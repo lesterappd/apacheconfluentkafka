@@ -6,17 +6,17 @@ confluentKafkaConnection:
     ignoreSslErrors: true
 
 resourceDetails:
-  - name: d-pdt-disx-pl-90072
+  - name: 
     type: Cluster 
-    id: lkc-38318j
+    id: 
 
-  - name: d-gmsgq-comm-pl-92104
+  - name: 
     type: Cluster 
-    id: lkc-zmrnzz
+    id: 
 
-  # - name: oc-gmsgq-SAIL-S3SINK
+  # - name: 
   #   type: Connector 
-  #   id: lcc-63dzgq
+  #   id: 
 
 metricDetails:
   - confluent_kafka_server_received_bytes
