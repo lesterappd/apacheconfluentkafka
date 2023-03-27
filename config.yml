@@ -1,0 +1,48 @@
+# Client level configurations, common across all sites to be monitored
+confluentKafkaConnection:
+    url:    https://api.telemetry.confluent.cloud/v2/metrics/cloud/export
+    authUser: 
+    authToken: 
+    ignoreSslErrors: true
+
+resourceDetails:
+  - name: d-pdt-disx-pl-90072
+    type: Cluster 
+    id: lkc-38318j
+
+  - name: d-gmsgq-comm-pl-92104
+    type: Cluster 
+    id: lkc-zmrnzz
+
+  # - name: oc-gmsgq-SAIL-S3SINK
+  #   type: Connector 
+  #   id: lcc-63dzgq
+
+metricDetails:
+  - confluent_kafka_server_received_bytes
+  - confluent_kafka_server_sent_bytes
+  - confluent_kafka_server_received_records
+  - confluent_kafka_server_sent_records
+  - confluent_kafka_server_retained_bytes
+  - confluent_kafka_server_active_connection_count
+  - confluent_kafka_server_request_count
+  - confluent_kafka_server_partition_count
+  - confluent_kafka_server_successful_authentication_count
+  - confluent_kafka_server_cluster_link
+  - confluent_kafka_server_dead_letter_queue_records
+
+    # defaultParams:
+#     method:          GET
+#     socketTimeout:   30000
+#     connectTimeout:  30000
+#     numAttempts:     1
+
+
+#prefix used to show up metrics in AppDynamics. This will create it in specific Tier. Replace
+metricPrefix: Server|Component:123|Custom Metrics|ApacheConfluentMonitor|
+#This will create this metric in all the tiers, under this path
+#metricPrefix: Custom Metrics|URLMonitor|
+
+
+
+
