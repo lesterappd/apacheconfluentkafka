@@ -12,10 +12,18 @@ This extension exports the monitoring metrics and pushes them into AppDynamics.
 
 ## Prerequisites
 
+1. The extension requires python3.x to run and relies on the following dependencies (prometheus_client, requests, yaml)
+2. Extension requires a service account setup on the Confluent side with MetricViewer role for the resources to be monitored. Links below provide steps for setting up the service account, cloud api key for querying the confluent metrics api and details on setting up the MetricsViewer Role.
+
+https://docs.confluent.io/cloud/current/monitoring/metrics-api.html#metrics-quick-start
+https://docs.confluent.io/cloud/current/monitoring/metrics-api.html#add-the-metricsviewer-role-to-a-new-service-account-in-the-ccloud-console
+
 ## Installation
 
 1. Clone the "apacheconfluentkafka" repo using `git clone <repoUrl>` command.
-2. The extension requires python3.x to run and relies on the following dependencies (prometheus_client, requests, yaml)
+2. Copy the extension folder to the monitors directory of the machine agent that is going to be used to run the extension.
+3. Extension is configured to run on linux every minute, please update the frequency if needed in the monitor.xml
+
 
 
 ## Configuration
