@@ -14,6 +14,10 @@ This extension exports the monitoring metrics and pushes them into AppDynamics.
 
 ## Installation
 
+1. Clone the "apacheconfluentkafka" repo using `git clone <repoUrl>` command.
+2. 
+
+
 ## Configuration
 ### Config.yml
 
