@@ -71,7 +71,6 @@ def request(url, username, token):
 def printMetrics(metricPrefix, value):
     
     ans = "name=" + metricPrefix + ", value=" +  str(value)    
-    #ans = "name=Server|Component:919|Custom Metrics|ApacheConfluentMonitor|Cluster|d-pdt-disx-pl-90072|confluent_kafka_server_cluster_load_percent, value=10"
     print(ans)
     sys.stdout.write(ans)  
 
