@@ -15,7 +15,7 @@ This extension exports the monitoring metrics and pushes them into AppDynamics.
 ## Installation
 
 1. Clone the "apacheconfluentkafka" repo using `git clone <repoUrl>` command.
-2. 
+2. The extension requires python3.x to run and relies on the following dependencies (prometheus_client, requests, yaml)
 
 
 ## Configuration
@@ -29,7 +29,16 @@ Configure the extension by editing the config.yml file in `<MACHINE_AGENT_HOME>/
        metricPrefix: "Server|Component:100|Custom Metrics|ApacheConfluentKafka|"
        ```
   More details around metric prefix can be found [here](https://community.appdynamics.com/t5/Knowledge-Base/How-do-I-troubleshoot-missing-custom-metrics-or-extensions/ta-p/28695).
+  
+  2. Configure the **confluentKafkaConnection** section in Config.yml to provide saas url for confluent kafka and authentication user and token for authentication. Apache Confluent documentation that provides steps to setup instructions to setup Cloud API key to authenticate to the Metrics API and configure the MetricViewer Role to the service account used to query the metrics api.
 
+https://docs.confluent.io/cloud/current/monitoring/metrics-api.html#metrics-quick-start
+https://docs.confluent.io/cloud/current/monitoring/metrics-api.html#add-the-metricsviewer-role-to-a-new-service-account-in-the-ccloud-console
+
+3. Configure the resources to be monitored by specifying a name, type and resource id in the **resourceDetails** section of the config.yml
+4. Configure the metrics to be captured per resource type in the **metricDetails** section of the config.yml. List of available metrics are found here;
+
+https://api.telemetry.confluent.cloud/docs/descriptors/datasets/cloud
 
 
 ## Contributing
