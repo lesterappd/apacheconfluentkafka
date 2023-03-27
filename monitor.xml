@@ -14,7 +14,7 @@
         </task-arguments>
         <executable-task>
             <type>file</type>
-			<file os-type="windows">ConfluentKafkaMonitoring.sh</file>
+			<file os-type="linux">ConfluentKafkaMonitoring.sh</file>
         </executable-task>
     </monitor-run-task>
 </monitor>
